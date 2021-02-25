@@ -5,6 +5,7 @@ from flask_login import UserMixin, LoginManager, login_user, current_user
 from flask_bcrypt import Bcrypt
 import requests
 
+
 app = Flask(__name__)
 app.secret_key = "The carbuncle ate itself"
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///users.sqlite3'
@@ -65,6 +66,7 @@ def logout():
         logout_user()
         flash('You are logged out.', 'info')
     return redirect(url_for('home'))
+
 
 @app.route('/memes')
 @login_required
