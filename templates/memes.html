@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block Title %} MEMES! {% endblock %}
+
+{% block content %}
+
+<ul class="d-flex justify-content-center list-group">
+  {% for meme in memes %}
+    <img class="list-group-itemd-block w-50" src={{meme}}>
+    <hr class="my-3">
+  {% endfor %}
+</ul>
+
+  
+    <!-- <img src= /> -->
+{% endblock %}

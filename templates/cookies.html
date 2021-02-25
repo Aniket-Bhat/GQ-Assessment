@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+
+{% block Title %} Cookies {% endblock %}
+
+{% block script %}
+<script>
+  window.setTimeout(() => {
+    document.getElementById("message").style.transition = '5s'
+    document.getElementById("message").style.opacity = 0
+ }, 5000);
+</script>
+{% endblock %}
+
+{% block content %}
+
+<div class="d-flex justify-content-center align-items-center" style="height:700px;">
+      <form action='' method='POST'>
+        <h5>
+          Hi, we require cookies to be able to serve you memes, do you accept to sharing cookies with us?
+        </h5>
+        <hr>
+        <div class='text-center form-control-group'>
+          <input type='checkbox' name='checkbox' id='checkbox' > 
+          <label for='checkbox'> I'll give you my cookies :) </label>
+        </div>
+        <hr>
+        <div class='text-center'>
+          <button class='btn btn-primary' type='submit'> Submit </button>
+        </div>
+      </form>
+</div>
+
+
+   <footer class='text-center fixed-bottom'>
+     <div class='alert alert-primary' id='message' role='alert'> 
+       These are the cookies we store: {{info}}
+    </div>
+
+   </footer>
+{% endblock %}
