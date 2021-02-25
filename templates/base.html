@@ -42,11 +42,12 @@
         <div class="alert alert-{{ category }}" id='msg' role="alert">
           <p>{{message}}</p>
         </div>
-          
+
         {% endfor %}
       {% endif %}
     {% endwith %}
-    {% block content %} {% endblock %}
+    {% block content %} 
+    {% endblock %}
   </div>
 <!-- JavaScript Bundle with Popper -->
 <script>

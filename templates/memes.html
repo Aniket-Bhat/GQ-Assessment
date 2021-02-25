@@ -3,14 +3,10 @@
 {% block Title %} MEMES! {% endblock %}
 
 {% block content %}
-
-<ul class="d-flex justify-content-center list-group">
-  {% for meme in memes %}
-    <img class="list-group-itemd-block w-50" src={{meme}}>
-    <hr class="my-3">
-  {% endfor %}
-</ul>
-
-  
-    <!-- <img src= /> -->
+  <ul class="d-flex justify-content-center list-group">
+      {% for meme in memes %}
+        <img class="img-fluid center-block list-group-item h-100" src={{meme}}>
+        <hr class="my-auto">
+      {% endfor %}
+  </ul>
 {% endblock %}

@@ -3,52 +3,50 @@
 {% block Title %} Home {% endblock %}
 
 {% block content %}
-<div class="d-flex justify-content-center align-items-center">
-
+  <div class="d-flex justify-content-center align-items-center">
     <div class="jumbotron jumbotron-fluid">
-        <h1 class="display-4">Hello, GrayQuest!</h1>
-        <p class="lead">This project was made as per your Assessment request! Find the details of the request below</p>
-        <hr class="my-4">
-        <p>
-            Create a webpage that shows memes using REST API along with the details of cookies stored during the session
-        </p>
-        <ol>
-            <li>
-                Login page accepts the username, and password values from the user and checks the fields for proper validation.
-            </li>
-            <li>
-                Create one user with admin/pass as login credentials validated through a database
-            </li>
-            <li>
-                The validated user gets redirected to a webpage where you show the cookie stored for the current session. Each new session should have its own cookie.
-            </li>
-            <li>
-                Inform the user that the website collects cookies, and accept and store their consent in the database. Show cookie information on the webpage at the bottom that auto fades after 5 seconds
-            </li>
-            <li>
-                If the user agrees, then display 5 Memes using the API <a href='https://api.imgflip.com/'> https://api.imgflip.com/</a> (you can use any other API of your choice).
-            </li>
-            <li>
-                If the user denies then display sorry message and log them out
-            </li>
+      <h1 class="display-4">Hello, GrayQuest!</h1>
+      <p class="lead">This project was made as per your Assessment request! Find the details of the request below</p>
+      <hr class="my-4">
+      <p>
+        Create a webpage that shows memes using REST API along with the details of cookies stored during the session
+      </p>
+      <ol>
+        <li>
+          Login page accepts the username, and password values from the user and checks the fields for proper validation.
+        </li>
+        <li>
+          Create one user with admin/pass as login credentials validated through a database
+        </li>
+        <li>
+          The validated user gets redirected to a webpage where you show the cookie stored for the current session. Each new session should have its own cookie.
+        </li>
+        <li>
+          Inform the user that the website collects cookies, and accept and store their consent in the database. Show cookie information on the webpage at the bottom that auto fades after 5 seconds
+        </li>
+        <li>
+          If the user agrees, then display 5 Memes using the API <a href='https://api.imgflip.com/'> https://api.imgflip.com/</a> (you can use any other API of your choice).
+        </li>
+        <li>
+          If the user denies then display sorry message and log them out
+        </li>
 
-        </ol>
-        <p>
-            <strong> Note </strong> Project Should be uploaded to github in public repository, zip or any other forms of submission wont be considered.
-        </p>
-        <p>
-            <strong>Bonus :</strong> Deploy the project in AWS, GCP or HEROKU and share with us how you configured the deployment server and the configuration and services used for deployment.
-            
-        </p>
-        <br/>
-        {% if current_user.is_authenticated %}
-            <a class="btn btn-primary btn-lg" href='{{ url_for("memes") }}' role="button">GIVE ME MEMES!</a>
-        {% else %}
-            <a class="btn btn-primary btn-lg" href='{{ url_for("login") }}' role="button">Login!</a>
-        {% endif %}
-            <div class='fixed-bottom text-center'>
-                Made with ❤️ by <a href='https://www.linkedin.com/in/aniket-bhat-242335171/'> Aniket Bhat </a>
-            </div>
+      </ol>
+      <p>
+        <strong> Note </strong> Project Should be uploaded to github in public repository, zip or any other forms of submission wont be considered.
+      </p>
+      <p>
+        <strong>Bonus :</strong> Deploy the project in AWS, GCP or HEROKU and share with us how you configured the deployment server and the configuration and services used for deployment.
+      </p>
+      <br/>
+      {% if current_user.is_authenticated %}
+        <a class="btn btn-primary btn-lg" href='{{ url_for("memes") }}' role="button">GIVE ME MEMES!</a>
+      {% else %}
+        <a class="btn btn-primary btn-lg" href='{{ url_for("login") }}' role="button">Login!</a>
+      {% endif %}
+      <div class='fixed-bottom text-center'>
+        Made with ❤️ by <a href='https://www.linkedin.com/in/aniket-bhat-242335171/'> Aniket Bhat </a>
+      </div>
     </div>
-</div>
+  </div>
 {% endblock %}

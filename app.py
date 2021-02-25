@@ -38,8 +38,6 @@ def home():
     return render_template('home.html')
 @app.route('/login', methods=['GET', 'POST'])
 def login():
-    # if current_user.is_authenticated:
-    #     return redirect(url_for('cookies', info=request.cookies.get('session')))
     if request.method == 'POST':
         user = request.form.get('username')
         pword = request.form.get('password')
