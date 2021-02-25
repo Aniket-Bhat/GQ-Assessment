@@ -64,7 +64,7 @@ def logout():
         session.pop('user', None)
         logout_user()
         flash('You are logged out.', 'info')
-    return redirect(url_for('login'))
+    return redirect(url_for('home'))
 
 @app.route('/memes')
 @login_required
@@ -79,7 +79,7 @@ def unset():
     user = User.query.filter_by(username=session['user']).first()
     user.consent = False
     db.session.commit()
-    return redirect(url_for('login'))
+    return redirect(url_for('home'))
 
 @app.route('/cookies', methods=['GET', 'POST'])
 @login_required
